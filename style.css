@@ -1,0 +1,180 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #f6f3f3;
+  overflow-x: hidden;
+  transition-property: all; 
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+   cursor: url('Asset\ 2.png'), auto;
+}
+
+#intro {
+  min-height: 100vh;
+  z-index: 10;
+  position: relative;
+  width: 97%;
+  margin: 0 auto;
+  color: rgb(234, 234, 234);
+  column-count: 3;
+  column-gap: 2em;
+  padding-top: 1.0em;
+}
+
+.centered-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100vh;
+  opacity: 0.3;
+  z-index: 0; /* 텍스트보다 뒤로 */
+  pointer-events: none;
+  filter: drop-shadow(0 0 6px rgba(120, 93, 157, 0.8));
+}
+
+.overlay-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 110%;
+  height: 100vh;
+  opacity: 0.5;
+  z-index: 15;
+  pointer-events: none;
+  filter: drop-shadow(0 0 2px rgba(219, 210, 227, 0.8));
+}
+
+.paragraph {
+  break-inside: avoid;
+  margin-bottom: 1em;
+  
+}
+
+.paragraph.title {
+  font-family: "PP Editorial Old", light;
+  font-weight: 200;
+  font-style: italic;
+  font-size: 20pt;
+  color: rgb(37, 0, 71);
+  text-align: left;
+  pointer-events: none;
+  
+}
+
+.paragraph.english:hover,
+.paragraph.korean:hover {
+  color: #978da0;  /* 보라색 같은 눈에 띄는 색 */
+  filter: drop-shadow(0 0 10px rgba(221, 213, 232, 0.9));
+  text-shadow: 0 0 5px rgba(221, 213, 232, 0.7);
+  cursor: url('Asset\ 1.png'), auto;
+  transition: filter 0.3s ease, text-shadow 0.3s ease;
+}
+
+
+
+
+.paragraph.korean {
+  font-family: 'OnulDaisy12';
+  font-weight: 450;
+  font-style: normal;
+  font-size: 11pt;
+  line-height: 1.7;
+  letter-spacing: -1px;
+  text-align: left;
+  hyphens: none;
+  word-break: keep-all;
+  color: rgb(37, 0, 71);
+  padding-top: 0.4em;
+    cursor: pointer;
+}
+
+.paragraph.english {
+  font-family: "Latin Modern Mono Prop", monospace;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 12pt;
+  hyphens: manual;
+  text-align: left;
+  word-break: break-word;
+  color: rgb(37, 0, 71);
+  padding-top: 0.4em;
+    cursor: pointer;
+}
+
+
+
+audio{
+  visibility: hidden;
+}
+
+audio{
+  visibility: hidden;
+}
+
+.step {
+  position: relative;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  padding-bottom: 100vh;
+}
+
+.step:last-child {
+  padding-bottom: 0;
+}
+
+.step img.img-bottom {
+    position: relative; /* 상대 위치 유지 */
+  width: auto;
+   top: 131px;  /* top이랑 위치 맞추기 위해 미세 조정 */
+  height: auto;
+   max-height: 100vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+  opacity: 1;
+  width: 70vw;
+  height: auto;
+  object-fit: contain;
+}
+
+.step img.img-top {
+  position: fixed;   /* 고정 위치 */
+  width: auto;
+  height: auto;
+   max-height: 100vh;
+  top: 50%;         /* 뷰포트 기준 수직 중앙 */
+  left: 50%;        /* 뷰포트 기준 수평 중앙 */
+  transform: translate(-50%, -50%);
+  
+  transition-property: all;
+  transition-duration: 2s;
+  transition-timing-function: ease-in-out;
+  opacity: 0;
+  width: 70vw;
+  height: auto;
+  object-fit: contain;
+  position: fixed;
+  filter: drop-shadow(0 0 6px rgba(221, 213, 232, 0.8));
+  z-index: 5;
+}
+
+.step.is-active img.img-bottom {
+ opacity: 1;
+}
+
+.step.is-active img.img-top {
+  opacity: 1;
+}
+
+.step.is-active .title-text {
+  opacity: 1;
+}
+
