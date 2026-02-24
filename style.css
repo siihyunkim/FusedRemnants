@@ -9,6 +9,26 @@ body {
   transition-timing-function: ease-in-out;
    cursor: url('Asset\ 2.png'), auto;
 }
+@font-face {
+  font-family: 'PPEditorialOld';
+  src: url('PPEditorialOld-Italic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'OnulDaisy12';
+  src: url('OnulDaisy12-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LMMonoProp';
+  src: url('lmmonoprop10-regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
 
 #intro {
   min-height: 100vh;
@@ -55,7 +75,7 @@ body {
 }
 
 .paragraph.title {
-  font-family: "PP Editorial Old", light;
+  font-family: 'PPEditorialOld';
   font-weight: 200;
   font-style: italic;
   font-size: 20pt;
@@ -93,7 +113,7 @@ body {
 }
 
 .paragraph.english {
-  font-family: "Latin Modern Mono Prop", monospace;
+  font-family: 'LMMonoProp', monospace;
   font-weight: 100;
   font-style: normal;
   font-size: 12pt;
